@@ -11,8 +11,8 @@ check_x2=0;
 x2_pr=a;
 osc=0;
 while (~flag)
-    error=minmax(f,x1,x2);
-    if (error <= req_err)
+    error=minmax(f,x1,x2)
+    if (error <= req_err*0.6)
         if (x2==b)
             u(m)=x2;
             flag=1;

@@ -1,13 +1,13 @@
 function u=BalancedErrorBoundaries(f,a,b,req_err)
-x1=0;
-x2=1;
+x1=a;
+x2=b;
 flag=1;
 m=2;
 u(1)=a;
 prev_x2=a;
 
 while (flag)
-    err=minmax(f,x1,x2);
+    err=minmax(f,x1,x2)
     if (err<=req_err) %если достигнутая ошибка аппроксимации меньше, чем требуемая
         if (b<=x2)
            u(m)=x2;
